@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Vertical</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Historia.html">Historia</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+				<li><a href="Inicio.html">Atras</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Contenido de la página -->
+		<h2><b>¿Necesitas asesoramiento técnico marmota, una cotización o más información?</b></h2>
+		<p> Contáctanos sin compromiso: nuestro equipo marmota de expertos está disponible de lunes a viernes para resolver todas tus preguntas. </p>
+		<p><h2><em>¡Escríbenos ahora y descubre la mejor solución en computación para ti, con el sigilo y la eficacia de una marmota!</em></h2></p>
+		<p><h3>🌐Redes Sociales Marmota</h3></p>
+		<p><em>📘Facebook: tiendacomputadoras</em></p>
+		<p><em>📷Instagram: @tiendacomputadoras.oficial</em></p>
+		
+		<p><h3><em>🏬Ubicación de nuestras Madrigueras</em></h3></p>
+		<p>	Centro (Buenos Aires) – Av. Corrientes 1234, CABA</p>
+		<p>	Palermo – Godoy Cruz 5678, CABA</p>
+		<p>	Recoleta – Av. Santa Fe 910, CABA</p>
+		<p><h3><em>✅Horarios de Atención Marmota</em></h3></p>
+		<p>Lun–Vie: 9 – 20 hs</p>	
+		<p>Sáb: 10 – 18 hs</p>
+		
+		<p><h3><em>📧Soporte por Email Marmota</h3></em></p>
+		<p><b>🟢Atención al Cliente</b></p>
+		<p>soporte@tiendacomputadoras.com</p>
+		<p><b>🟢Ventas y Cotizaciones</b></p>
+		<p>ventas@tiendacomputadoras.com</p>
+		<p><b>🟢Reclamos y Garantías</b></p>
+		<p>garantias@tiendacomputadoras.com</p>
+        </main>
+    </div>
+</body>
+</html>

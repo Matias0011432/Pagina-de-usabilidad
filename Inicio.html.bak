@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Vertical</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Historia.html">Historia</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Contenido de la página -->
+			<h1><strong><p>¡En TecnoByte Marmota, cuidamos tu equipo como lo haría una marmota!</h1></strong></p>
+			<p><b><h2>Bienvenido a TecnoByte Marmota, donde la pasión por la tecnología se despierta tan rápido como una marmota al alba. En nuestra página de inicio encontrarás:</h2></b></p>
+			<p><b>🦫 TecnoByte con espíritu de marmota: innovamos y te ofrecemos los últimos equipos de escritorio, portátiles y componentes, con la energía constante y curiosa de una marmota explorando su territorio.</b></p>
+			<p><b>🔹 Asesoramiento marmotelógico: nuestro equipo experto, siempre alerta como una marmota en su madriguera, te guía paso a paso para que elijas la configuración perfecta según tus necesidades.</b></p>
+			<p><b>🛠️ Soporte integral 24/7: ya sea a través de chat, email o visita a sucursal, estaremos listos para asistirte en instalación, actualizaciones y garantías. Nada se escapa al olfato marmota de nuestro servicio.</b></p>
+			
+			<p><h2>¿Qué puedes hacer aquí?</h2></p>
+			<p><b>🟢 Explorar nuestras colecciones: PCs gaming, estaciones de trabajo y accesorios de alta performance, con ofertas que despiertan el hormigueo de emoción marmota en tus manos.</b></p>
+			<p><b>🟢 Conocer nuestras sucursales: descubre nuestras madrigueras tecnológicas en Buenos Aires y disfruta de atención personalizada cara a cara.</b></p>
+			<p><b>🟢 Contactar con nuestro equipo: si tienes dudas o necesitas una cotización rápida, escríbenos y responderemos en tiempo récord con el celo de una marmota protegiendo su hogar.</b></p>
+			<p><h1>En TecnoByte Marmota combinamos la solidez de la tecnología con la intuición y el entusiasmo de una marmota. ¡Únete a nuestra comunidad y despierta todo el potencial de tu equipo!</h1></p>
+			<p><img src="Marmota1.jpeg" width="40%" alt="Marmota" class="Marmota1"></p>
+        </main>
+    </div>
+</body>
+</html>

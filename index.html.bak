@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Computadoras - Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Evita el scroll horizontal que puede aparecer brevemente durante la animación del sidebar */
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            /* Imagen de fondo para la sección principal */
+            background-image: url('https://placehold.co/1920x1080/334155/e2e8f0?text=Componentes+de+PC');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Estilos para la transición suave del sidebar */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Asegurar que el contenido principal no se solape con la barra superior móvil fija */
+        main header#inicio {
+            padding-top: 0; /* Reset para desktop */
+        }
+        @media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px */
+            main header#inicio {
+                 /* Ajustar si la altura de la barra superior móvil cambia (actualmente es p-4, aprox 4rem/64px con texto) */
+                 /* Opcionalmente, dejar que el contenido fluya y la barra superior lo cubra si es translúcida */
+            }
+            /* Si la barra superior móvil es opaca y fija, el contenido necesita espacio */
+             body.mobile-sidebar-open main {
+                /* Podríamos aplicar un filtro de brillo o desenfoque al contenido principal cuando el sidebar está abierto */
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <div class="md:flex min-h-screen">
+        <nav id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-white p-6 transform -translate-x-full md:translate-x-0 md:static md:flex-shrink-0 shadow-lg">
+            <div class="flex justify-between items-center md:block mb-10">
+                 <a href="#" class="text-3xl font-bold">PC<span class="text-sky-400">Total</span></a>
+                 <button id="close-sidebar-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
+                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                 </button>
+            </div>
+            <ul class="space-y-3">
+                <li><a href="#inicio" class="sidebar-link block py-2.5 px-4 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out font-medium">Inicio</a></li>
+                <li><a href="#" class="sidebar-link block py-2.5 px-4 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out font-medium">Productos <span class="text-xs text-sky-300"> </span></a></li>
+                <li><a href="#" class="sidebar-link block py-2.5 px-4 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out font-medium">Historia <span class="text-xs text-sky-300"> </span></a></li>
+                <li><a href="#" class="sidebar-link block py-2.5 px-4 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out font-medium">Contacto <span class="text-xs text-sky-300"> </span></a></li>
+            </ul>
+        </nav>
+
+        <main class="flex-1 flex flex-col min-w-0"> <div class="md:hidden p-4 flex justify-between items-center bg-slate-800 text-white sticky top-0 z-20 shadow-md">
+                 <a href="#" class="text-xl font-bold">PC<span class="text-sky-400">Total</span></a>
+                <button id="open-sidebar-button" class="text-white p-2 rounded-md hover:bg-slate-700 focus:outline-none focus:bg-slate-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+
+            <header id="inicio" class="hero-bg text-white flex-grow flex items-center justify-center p-4">
+                <div class="container mx-auto text-center bg-black bg-opacity-65 p-8 md:p-12 rounded-xl shadow-2xl max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">La Mejor Tecnología <br class="hidden sm:block">a tu Alcance</h1>
+                    <p class="text-lg sm:text-xl mb-10 text-slate-200">Encuentra las últimas novedades en computadoras, componentes y periféricos.</p>
+                    <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3.5 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg">Explorar Novedades</a>
+                </div>
+            </header>
+            </main>
+    </div>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden md:hidden"></div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openSidebarButton = document.getElementById('open-sidebar-button');
+        const closeSidebarButton = document.getElementById('close-sidebar-button');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link'); // Para cerrar el sidebar al hacer clic en un enlace
+
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+            sidebarOverlay.classList.remove('hidden');
+            document.body.classList.add('mobile-sidebar-open'); // Para estilos adicionales si es necesario
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('translate-x-0');
+            sidebarOverlay.classList.add('hidden');
+            document.body.classList.remove('mobile-sidebar-open');
+        }
+
+        if (openSidebarButton) {
+            openSidebarButton.addEventListener('click', openSidebar);
+        }
+        
+        if (closeSidebarButton) {
+            closeSidebarButton.addEventListener('click', closeSidebar);
+        }
+
+        if (sidebarOverlay) {
+            sidebarOverlay.addEventListener('click', closeSidebar);
+        }
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Solo cierra el sidebar si estamos en vista móvil (cuando el sidebar no es estático)
+                if (window.innerWidth < 768) { // 768px es el breakpoint 'md' de Tailwind
+                    closeSidebar();
+                }
+                // Si los enlaces son #, previene el salto de página
+                if (link.getAttribute('href') === '#') {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

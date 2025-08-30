@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Vertical</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Historia.html">Historia</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+				<li><a href="Inicio.html">Atras</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Contenido de la página -->
+			<h1> Productos </h1>
+			<p> Estos son algunos productos de nuestra tienda </p>
+			
+			<div class="producto"><p>Alienware Aurora R14 Desktop Ryzen Edition</p><a href="https://articulo.mercadolibre.com.mx/MLM-1931017395-desktop-alienware-aurora-r14-ryzen-9-5900-32gb-ram-1tb-ssd-_JM"><p><img src="CPU.png" width="70%" alt="CPU"></p></a><div class="precio"> $69,963</div></div>
+			<div class="producto"><p>Dell XPS 13 9310</p><a href="https://articulo.mercadolibre.com.mx/MLM-1768469583-laptop-dell-xps-13-9310-intel-core-i58gb-ram-512gb-ssd-_JM?searchVariation=176373905993#polycard_client=search-nordic&searchVariation=176373905993&position=19&search_layout=stack&type=item&tracking_id=db3e0c77-95b1-4375-91aa-1296794aca9d"><p><img src="Laptop1.png" width="65%" alt="Laptop Portatil"></p></a><div class="precio"> $1.463.999</div></div>
+			<div class="producto"><p>Razer DeathAdder V2 Pro</p><a href="https://articulo.mercadolibre.com.ar/MLA-1991731770-mouse-razer-deathadder-v2-pro-inalambrico-8-botones-_JM#polycard_client=search-nordic&position=16&search_layout=stack&type=item&tracking_id=c3893e04-bc43-4a11-8836-14797fe62766"<p><img src="Mouse1.png" width="25%" alt="Mouse Gaming"></p></a><div class="precio"> $176.502</div></div>
+			<div class="producto"><p>ASUS ROG Swift PG279Q</p><a href="https://articulo.mercadolibre.com.ar/MLA-2059757412-asus-republic-of-gamers-swift-pg279qm-27-169-g-sync-240-_JM#polycard_client=search-nordic&position=25&search_layout=stack&type=item&tracking_id=4d90c398-81eb-4b09-a4c2-b6c27f56909e"><p><img src="Monitor1.png" width="60%" alt="Monitor Gaming"></p></a><div class="precio"> $982.573</div></div>
+			<div class="producto"><p>Corsair K95 RGB Platinum XT</p><p><img src="Teclado.png" width="65%" alt="Teclado Mecanico"></p><div class="precio"> $232.399</div></div>
+        </main>
+    </div>
+</body>
+</html>
